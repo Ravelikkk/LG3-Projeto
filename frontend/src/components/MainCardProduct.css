@@ -1,0 +1,261 @@
+.wrapper-products {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 6rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    gap: .3rem;
+}
+
+.main-cardProduct {
+    width: 300px;
+    height: 300px;
+    max-height: 300px;
+    border: 4px double #ee0000;
+    transition: all ease-in .3s;
+    background-color: white;
+    margin-bottom: .3rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.main-cardProduct:hover {
+    transform: scale(1.03);
+    box-shadow: .6rem .1rem .2rem rgb(27, 27, 27);
+    border: 4px double #ee0000;
+}
+
+/* .main-cardProduct:hover .burger-price{
+    color: white;
+} */
+
+
+.img--mediumSize {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.card-rating span {
+  color: #ee0000;
+  margin: 0.1rem;
+}
+
+.card-rating span:last-child {
+    color: #ee0000;
+    text-decoration: underline;
+    text-decoration-color: #ee0000;
+
+}
+
+.card-rating {
+    width: max-content;
+    margin: 0 auto;
+    padding: .5rem;
+}
+
+.wrapperImage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.wrapperImage  > span {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    z-index: 2;
+}
+
+.wrapperImage > span > i > svg {
+    color: white;
+    font-size: 2rem;
+}
+
+.wrapperImage > span > i {
+    position: absolute;
+    top: -200px;
+    left: 115px;
+}
+
+.wrapperImage > span > i > svg:hover {
+    color: #ee0000;
+    transform: scale(1.03);
+}
+
+.burger-title {
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: .2rem;
+    text-decoration: none !important;
+
+}
+
+.burger-price {
+    font-family: cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+
+    /* background: linear-gradient(to right,rgb(255, 208, 0) 15%,#ff0000 85%); */
+}
+
+.burger-price  p {
+    width: max-content;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: .2rem;
+}
+
+/* Modal do produto clicado pelo Icon */
+
+.modalSingleProductClick {
+    position: absolute;
+    z-index: 5;
+    width: 80%;
+    height: max-content;
+    min-height: 70%;
+    border: 4px double #ee0000;
+    background-color: #000;
+    background-size: 100%;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    margin: 0 auto;
+    cursor: initial;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.modalSingleProductClick > img{
+    flex-grow: 1;
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+.modalSingleProductClick > div{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.descriptionOfSingleProduct {
+    font-size: 1.1rem;
+    font-family: cursive;
+    background-color: rgb(27, 27, 27);
+    line-height: 1.3rem;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 80%;
+}
+
+.burger-title.colorGreen {
+    color: #ee0000;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    text-decoration: underline;
+}
+
+.containerQuantidadeProduto {
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.containerQuantidadeProduto > label{
+    color: #ee0000;
+    margin-right: .5rem;
+}
+
+.containerButtonsModalSingleProduct{
+    padding: 0 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.btnModalSingleProduct {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: cursive;
+    border: 4px double #ee0000;
+    border-radius: 10%;
+    padding: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem black;
+    background-color: #000;
+    text-shadow: 0.15rem 0.09rem 0.009rem black;
+    transition: all ease .3s;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-right: .5rem;
+}
+
+.btnModalSingleProduct.-danger {
+    background: #ee0000;
+    color: black;
+    text-shadow: none;
+    border: 4px double black;
+}
+
+.btnModalSingleProduct:hover {
+    text-shadow: none;
+    transform: scale(1.05);
+ 
+    
+}
+
+/*.btnModalSingleProduct.-danger:hover {
+
+}
+*/
+/* container blur */
+
+.containerBlur {
+    position: absolute;
+    width: 100%;
+    min-height: 70vh;
+    transition: 0.5s;
+    background-color: gray;
+    display: none;
+    z-index: 4;
+    cursor: initial;
+    margin-top: -2rem;
+}
+
+/* ativação do modal */
+
+.containerBlur.isActive {
+    display: inherit;
+}
+
+.modalSingleProductClick.isActive {
+    display: flex;
+    border-color: #ee0000;
+}
+
+/* Icon quantidade de produto selecionado */
+
+.wrapperImage > span > i > span {
+    border-radius: 50%;
+    padding: 0.1rem 0.3rem;
+    background-color: red;
+    font-weight: 800;
+    color: black;
+    position: absolute;
+    left: 9px;
+    bottom: 27px;
+    z-index: -1;
+}

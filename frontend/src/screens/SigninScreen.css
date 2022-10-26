@@ -1,0 +1,91 @@
+.main-signin--container {
+    width: 100%;
+    width: 100%;
+    contain: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-signin--container > #login {
+    width: max-content;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #ee0000;
+    font-weight: 800;
+    font-family: cursive;
+    padding: 2rem;
+    background-color: white;
+    border: 4px double #ee0000;
+    margin-top: 4rem;
+    
+}
+
+.main-signin--container > #login > form > h1 {
+    border-bottom: 4px double #ee0000;
+    text-align: center;
+}
+
+.main-signin--container > #login > form > p {
+    margin-bottom: .5rem;
+}
+
+.main-signin--container > #login > form > p:nth-child(2) {
+    margin-top: .5rem;
+}
+
+.main-signin--container > #login > form > p > label{
+    display: block;
+}
+
+.main-signin--container > #login > form > p > input[type=text], .main-signin--container > #login > form > p > input[type=password]{
+    width: 100%;
+    height: 1.1rem;
+}
+
+.main-signin--container > #login > form > p > input:focus {
+    border: 2px double #ee0000;
+    outline-color: #ee0000;
+}
+
+
+.main-signin--container > #login > form > p > input[type=checkbox]{
+    margin-right: .5rem;
+    display: inline-block;
+}
+
+.main-signin--container > #login > form > p:nth-child(4) > label{
+    display: inline-block;
+}
+
+.main-signin--container > #login > form > p:nth-child(6) > a{
+    color: #ee0000;
+    margin-left: .5rem;
+    text-decoration: underline;
+}
+
+.main-signin--container > #login > form > p > input[type=submit]{
+    width: 100%;
+    cursor: pointer;
+    font-family: cursive;
+    font-size: 1rem;
+    background-color: white;
+    color: #ee0000;
+    border: 4px double #ee0000;
+    border-radius: 5px;
+    transition: all ease .3s;
+    padding: .3rem;
+}
+
+.main-signin--container > #login > form > p > input[type=submit]:hover{
+    transform: scale(1.05);
+    background-color: #ee0000;
+    color: #FFF;
+    border-color: black;
+}
+
+
